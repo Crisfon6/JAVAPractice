@@ -1,0 +1,14 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String Args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of nodes for you graph");
+		int nNodes = sc.nextInt();
+		
+		Graph net = new Graph();
+	}
+	
+}

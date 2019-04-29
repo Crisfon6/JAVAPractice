@@ -1,0 +1,17 @@
+package main;
+
+public class Prim {
+	static int SUMAPESOS;
+	public  Node[] net;
+	
+	
+	public Prim(Node[] net) {
+		super();
+		this.net = net;
+	}
+
+
+	public void Algorithm() {
+		
+	}
+}

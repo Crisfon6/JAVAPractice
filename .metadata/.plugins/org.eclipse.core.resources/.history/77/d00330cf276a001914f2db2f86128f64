@@ -1,0 +1,138 @@
+package main;
+
+public class Prim {
+	int[][] grafo;
+	int x=0, y=0, mayor;
+	int menor = 9999;
+	char[] nombres;// Nombre de los nodos
+	int suma=0;
+	String nodesRecorrido = "";
+
+	public Prim(int[][] grafo) {
+		super();
+		this.grafo = grafo;
+		Imprimir();
+		nombres();
+	}
+
+	public void nombres() {
+		nombres = new char[26];
+		for (int i = 0; i < 26; i++) {
+			nombres[i] = (char) ('A' + i);
+		}
+	}
+
+	public boolean Recorrido(int i, int j) {// no deja crear bucles
+		boolean recorrido = false;
+		for (int k = 0; k < nodesRecorrido.length(); k++) {
+			if (nodesRecorrido.charAt(k) == nombres[i]) {
+				if (nodesRecorrido.charAt(k) == nombres[j]) {
+					System.out.println("Entro");
+				}
+
+			}
+		}
+		return recorrido;
+	}
+	public void NoLoops() {//Evita Loops
+		
+	}
+
+	public void ArcoMenor() {
+		
+		for (int i = 0; i < grafo.length; i++) {
+			for (int j = 0; j < grafo.length; j++) {
+
+				if (grafo[i][j] >0) {// Busco el mas corto
+					mayor = grafo[i][j];
+
+					if (menor > mayor) {
+
+						if (Recorrido(i, j) == false) {// Buscar si ya pase por hay par no traer loops
+							menor = mayor;
+
+							x = i;
+							y = j;
+
+						}
+					}
+				}
+			}
+		}
+		nodesRecorrido += nombres[x];
+		nodesRecorrido += nombres[y];
+		
+		suma += menor;
+		grafo[x][y] = -2;
+		grafo[y][x] = -2;
+		Imprimir();
+		
+		
+	}
+	public void Menor() {
+		
+	}
+	public void SegundoPaso() {
+		int menor2 =9999;
+		int mayor2=0;
+		int menor22 =9999;
+		int mayor22=0;
+		int menorDef;
+		int letra2 = 0,letra22=0;
+		int letraDef;
+		int auxY=0,auxX=0;
+			for (int j = 0; j < grafo.length; j++) {
+				if (grafo[x][j]>0 ) {
+					mayor2 =grafo[x][j];
+					
+					if (menor2>grafo[x][j]) {
+						menor2=mayor2;
+						letra2=j;
+						auxY = y;
+						
+					}	
+				}
+					if ( grafo[y][j]>0) {
+						mayor22 =grafo[y][j];	
+						if (menor22>grafo[y][j]) {
+							menor22=mayor22;
+							letra22=j;
+							x=y;
+							y=j;
+						}
+					}
+				
+			}
+			if (menor22<menor2) {
+				menorDef=menor22;
+				letraDef=letra22;
+			}else {
+				menorDef = menor2;
+				letraDef=letra2;
+			}
+			
+			nodesRecorrido += nombres[letraDef];
+			
+			suma += menorDef;
+			grafo[x][y] = -2;
+			grafo[y][x] = -2;
+			Imprimir();
+			
+										
+	}
+	public void Imprimir() {
+		for (int i = 0; i < grafo.length; i++) {
+			for (int j = 0; j < grafo.length; j++) {
+				System.out.print(grafo[i][j]+" ");
+			}
+			System.out.println();
+		}
+		System.out.println("El recorrido es "+suma);
+		System.out.println("Los nodos recogidos son "+nodesRecorrido);
+		System.out.println("****************************");
+	}
+
+	
+
+	
+}

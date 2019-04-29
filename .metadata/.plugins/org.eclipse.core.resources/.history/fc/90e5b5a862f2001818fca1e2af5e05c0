@@ -1,0 +1,11 @@
+package propiedadessistema;
+import java.util.*;
+public class PropiedadesSistema {
+
+	public static void main(String[] args) {
+		Properties propiedades = System.getProperties(); 
+		Enumeration nombrePropiedades = propiedades.propertyNames();
+
+	}
+
+}

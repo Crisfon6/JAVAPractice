@@ -1,0 +1,46 @@
+package main;
+
+import java.util.Scanner;
+
+public class Prim {
+	private Node[] nodes;
+	Scanner sc = new Scanner(System.in);
+	int nNodes;
+	Node NodeAux;
+	
+
+	public Prim(int nNodes) {
+		super();
+		this.nNodes = nNodes;
+		this.nodes = new Node[nNodes];
+		addNodes();
+	}
+	
+	
+
+	public void addNodes() {
+		/*
+		for (int i = 0; i < nNodes; i++) {
+			System.out.println("Enter the name node");
+
+			String name = sc.next();
+			System.out.println("How many nodes are connected to this");
+			int nConnections = sc.nextInt();
+			String[] connections = {"o","p"};
+			for (int j = 0; j < nConnections; j++) {
+				System.out.println("Enter the node connected to this");
+				String aux = sc.next(); 
+				connections[j] = aux+",";
+				
+			}
+			nodes[i] = new Node(name,connections); // Create the node
+			*///ESTO DE ARRIBA SIRVE
+		
+		nodes[0] = new Node("A", aux);
+		nodes[0].addArc();
+			
+
+		}
+
+	}
+//}

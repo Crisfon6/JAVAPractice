@@ -1,0 +1,11 @@
+package main;
+
+public class Prim {
+	static int SUMAPESOS;
+	public  Node[] net;
+	
+	
+	public void Algorithm() {
+		
+	}
+}

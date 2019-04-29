@@ -1,0 +1,22 @@
+package main;
+
+public class Arc {
+	int nArc;
+	String[] values;
+
+	
+	public Arc(String[] values, int nArc) {
+		super();
+		this.values = values;
+		this.nArc = nArc;
+	}
+
+	public String[] getValues() {
+		return values;
+	}
+
+	public void setValues(String[] values) {
+		this.values = values;
+	}
+	
+}

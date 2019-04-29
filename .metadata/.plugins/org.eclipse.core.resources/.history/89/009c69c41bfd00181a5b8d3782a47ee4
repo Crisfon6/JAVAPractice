@@ -1,0 +1,50 @@
+package personas.jdbc;
+
+import java.sql.*;
+
+import java.util.ArrayList;
+import java.util.List;
+import personas.dto.PersonaDTO;
+
+public class PersonaDaoJDBC  implements PersonaDao{
+	private Connection userConn;
+	private String SQL_INSERT ="INSERT INTO persona(nombre,apellido) VALUES(?,?)";
+	private String SQL_UPDATE ="UPDATE persona SET nombre=?, apellido=?, WHERE id_persona=?";
+	private String SQL_DELETE ="DELETE FROM persona WHERE id_persona=?";
+	private String SQL_SELECT ="SELECT * FROM persona WHERE id_persona=?";
+	
+	public PersonaDaoJDBC() {
+		
+	}
+
+	@Override
+	public int insert(PersonaDTO persona)
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(PersonaDTO persona) 
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(PersonaDTO persona) 
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<PersonaDTO> select() 
+			throws SQLException {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	
+	
+}

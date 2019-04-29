@@ -1,0 +1,19 @@
+package main;
+
+public class Arc {
+	
+	String inicio;
+	String fin;
+	float cost;
+	public Arc(String inicio, String fin, float cost) {
+		super();
+		this.inicio = inicio;
+		this.fin = fin;
+		this.cost = cost;
+	}
+	
+	
+
+	
+
+}

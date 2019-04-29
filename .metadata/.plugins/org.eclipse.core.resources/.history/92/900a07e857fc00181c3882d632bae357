@@ -1,0 +1,47 @@
+package personas.jdbc;
+
+import java.sql.*;
+import java.util.*;
+
+public class PersonaDaoJDBC  implements PersonaDao{
+	private Connection userConn;
+	private String SQL_INSERT ="";
+	private String SQL_UPDATE ="";
+	private String SQL_DELETE ="";
+	private String SQL_SELECT ="";
+	
+	public PersonaDaoJDBC() {
+		
+	}
+
+	@Override
+	public int insert(PersonaDTO persona) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int update(PersonaDTO persona) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public int delete(PersonaDTO persona) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
+
+	@Override
+	public List<PersonaDTO> select() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+
+	@Override
+	public List<PersonaDTO> select() {
+		// TODO Auto-generated method stub
+		return null;
+	}
+	
+}

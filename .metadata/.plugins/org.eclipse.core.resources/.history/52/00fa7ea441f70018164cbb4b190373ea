@@ -1,0 +1,27 @@
+package manejopersonas;
+
+
+
+import java.util.List;
+
+import datos.PersonasJDBC;
+import domain.Persona;
+
+public class ManejoPersonas {
+	public static void main(String[] args) {
+		PersonasJDBC personaJDBC = new PersonasJDBC();
+		//prueba del metodo insert
+		personaJDBC.insert("Jhonatan", "Fecaca");
+		//prueba del metodo update
+		//personaJDBC.update(4, "Nombre3", "Apellido3");
+		//prueba metodo delete
+		//personaJDBC.delete(1);
+//		//prueba metodo select
+		List<Persona>persona = personaJDBC.select();
+		for (Persona persona2 : persona) {
+			System.out.println(persona2);
+		}
+	}
+	
+
+}

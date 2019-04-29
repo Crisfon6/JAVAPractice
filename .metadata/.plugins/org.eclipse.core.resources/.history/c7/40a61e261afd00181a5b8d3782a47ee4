@@ -1,0 +1,15 @@
+package personas.jdbc;
+
+import java.sql.SQLException;
+
+public interface PersonaDao {
+
+	public abstract int insert(PersonaDTO persona);
+	
+	public abstract int update(PersonaDTO persona);
+	
+	public abstract int delete(PersonaDTO persona);
+	
+	public abstract List<PersonaDTO> select();
+	
+}

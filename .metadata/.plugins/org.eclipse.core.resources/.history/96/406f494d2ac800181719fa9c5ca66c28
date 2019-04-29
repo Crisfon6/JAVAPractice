@@ -1,0 +1,112 @@
+package principal;
+
+import java.security.SecureRandom;
+import java.util.ArrayList;
+import java.util.Scanner;
+
+public class Metodos {
+
+	Scanner sc = new Scanner(System.in);
+
+	public Byte[] CrearPolinomio(int gradoMayor) {
+		Byte[] Polinomio = new Byte[gradoMayor + 1];
+		int contador = Polinomio.length - 1;
+		for (int i = 0; i < Polinomio.length; i++) {
+			System.out.println("Ingresa el valor para que acompaña a X^" + contador);
+			Polinomio[i] = sc.nextByte();
+			contador--;
+		}
+		contador = Polinomio.length - 1;
+		System.out.println("El polinomio Generador es :");
+		for (int i = 0; i < Polinomio.length; i++) {// Imprimo polinomio
+			System.out.print(Polinomio[i] + " X^" + contador + "+ ");
+			contador--;
+		}
+		System.out.println();
+		for (int i = 0; i < Polinomio.length; i++) {
+
+			System.out.print(Polinomio[i] + " ");
+		}
+		return Polinomio;
+	}
+
+	public Byte[] AgregarBits(Byte[] dataInicial, Byte[] polinomio) {
+		Byte[] dataBytesAgregados = new Byte[(dataInicial.length + (polinomio.length - 1))];
+		for (int i = 0; i < dataInicial.length; i++) {
+			dataBytesAgregados[i] = dataInicial[i];
+		}
+		for (int i = dataInicial.length; i < dataBytesAgregados.length; i++) {
+			dataBytesAgregados[i] = 0;
+		}
+		return dataBytesAgregados;
+	}
+
+	public void DivisionXor(Byte[] dataBytesAgregados, Byte[] polinomio) {
+		ArrayList<Byte> residuo = new ArrayList<Byte>();
+		for (int i = 0; i < dataBytesAgregados.length; i++) {
+			residuo.add(i, dataBytesAgregados[i]);
+		}
+
+		// ESto en un ciclo
+		while (residuo.size() > polinomio.length) {
+			// pruebas
+//			System.out.println();
+//			Imprimir(residuo);
+//			System.out.println();
+//			System.out.println(residuo.size());
+			// Fin pruebas
+			for (int j = 0; j < polinomio.length; j++) {// XORT
+				if (residuo.get(j) != polinomio[j]) {
+					residuo.remove(j);
+					residuo.add(j, (byte) 1);
+				} else {
+					residuo.add(j, (byte) 0);
+				}
+			}
+		
+			// pruebas
+			System.out.println();
+			System.out.println("prueba1"+residuo.get(0));
+			Imprimir(residuo);
+			System.out.println();
+			System.out.println(residuo.size());
+			// Fin pruebas
+			do {
+				EliminarPosicion(residuo);
+			} while (residuo.get(0) == 0);
+
+		}
+
+	}
+
+	public void Imprimir(Byte[] dataBytesAgregados) {
+		for (byte b : dataBytesAgregados) {
+			System.out.print(b + " ");
+		}
+	}
+
+	public void Imprimir(ArrayList<Byte> imprimir) {
+		for (Byte byte1 : imprimir) {
+			System.out.print(byte1 + " ");
+		}
+	}
+
+	public ArrayList<Byte> EliminarPosicion(ArrayList<Byte> residuo) {
+		ArrayList<Byte> auxiliar = new ArrayList<Byte>();
+		for (int i = 1; i < residuo.size(); i++) {
+			auxiliar.add(residuo.get(i));
+		}
+		return auxiliar;
+	}
+
+	public byte[] generarBytes(int n) {
+		byte[] Data = new byte[n];
+		SecureRandom sr = new SecureRandom();
+		sr.nextBytes(new byte[1]);
+		sr.setSeed(System.currentTimeMillis());
+		for (int i = 0; i < n; i++) {
+			Data[i] = (byte) sr.nextInt(2);
+		}
+		return Data;
+	}
+}

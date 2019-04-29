@@ -1,0 +1,45 @@
+package control;
+
+import java.util.List;
+
+import javax.persistence.EntityManager;
+import javax.persistence.EntityManagerFactory;
+import javax.persistence.Persistence;
+import javax.persistence.Query;
+
+import model.Producto;
+
+
+
+public class AdministracionProducto {
+	
+	private static final String PERSISTENCE_UNIT_NAME = "User";
+	private static EntityManagerFactory  factory;
+	
+	public static void main(String[] args) {
+		factory = Persistence.createEntityManagerFactory(PERSISTENCE_UNIT_NAME);
+		EntityManager em =factory.createEntityManager();
+		
+		Query  q = em.createQuery("SELECT u FROM User u");
+		List<Producto> productoList = q.getResultList();
+		for (Producto producto : productoList) {
+			System.out.println(producto.getNombre());
+		}
+		System.out.println("Size "+ productoList.size());
+		//CReate new product
+		
+		em.getTransaction().begin();
+		Producto producto = new Producto();
+		producto.setNombre("prodcuto");
+		em.persist(producto);
+		em.getTransaction().commit();
+		em.close();
+		
+		
+		
+		
+	}
+	
+	
+
+}

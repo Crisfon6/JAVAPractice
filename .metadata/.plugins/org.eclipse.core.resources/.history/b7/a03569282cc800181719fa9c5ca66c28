@@ -1,0 +1,31 @@
+package principal;
+
+import java.util.Scanner;
+
+public class Main {
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		System.out.println("¿Cual sera el mayor grado de tu polinomio generador ?");
+		// int gradoMayor = sc.nextInt(); Descomentar despues
+		int gradoMayor = 2;
+		Metodos CRC = new Metodos();
+		Byte[] polinomio = CRC.CrearPolinomio(gradoMayor);
+		System.out.println();
+		System.out.println("Su data cuantos bits tiene");
+		//int numBytes = sc.nextInt();DEscomentar despues
+		int numBytes =5 ;
+		Byte[] dataInicial= {1,0,1,1,0};
+		//Byte[] dataInicial = new Byte[numBytes];Descomentar
+		for (int i = 0; i < numBytes; i++) {
+			System.out.println("Ingrese los valores de la data");
+			dataInicial[i] = sc.nextByte();
+		}
+
+		Byte[] dataBytesAgregados = CRC.AgregarBits(dataInicial, polinomio);
+		CRC.Imprimir(dataBytesAgregados);
+		CRC.DivisionXor(dataBytesAgregados, polinomio);
+	}
+
+}

@@ -1,0 +1,20 @@
+package main;
+
+public class Arc {
+	String[] values;
+
+	
+	public Arc(String[] values, int nConnections) {
+		super();
+		this.values = values;
+	}
+
+	public String[] getValues() {
+		return values;
+	}
+
+	public void setValues(String[] values) {
+		this.values = values;
+	}
+	
+}

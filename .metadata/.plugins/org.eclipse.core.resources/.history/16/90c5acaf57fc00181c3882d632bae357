@@ -1,0 +1,31 @@
+package personas.jdbc;
+
+import java.sql.*;
+import java.util.*;
+
+public class PersonaDaoJDBC {
+	private Connection userConn;
+	private String SQL_INSERT ="";
+	private String SQL_UPDATE ="";
+	private String SQL_DELETE ="";
+	private String SQL_SELECT ="";
+	
+	public PersonaDaoJDBC() {
+		
+	}
+	public PersonaDaoJDBC(Connection c) {
+		
+	}
+	public int insert(PersonaDTO persona) {
+		return (Integer) null;
+	}
+	public int update(PersonaDTO persona) {
+		return 0;
+	}
+	public int delete(personaDTO persona) {
+		return 0;
+	}
+	public List<PersonaDTO> select(){
+		return null;
+	}
+}

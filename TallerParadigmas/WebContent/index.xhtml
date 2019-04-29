@@ -1,0 +1,92 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui"
+	
+	>
+	
+	
+<h:head>
+	<center><h1>Introduccion Productos</h1></center>
+
+
+
+
+</h:head>
+
+<h:body>
+	<h:form value ="form">
+	<p:panel id="panelCrear" header="Crear Productos"
+			style="margin-bottom:20px">
+			<h:panelGrid columns="2" cellpadding="10">
+	
+				<h:outputLabel value="Codigo : " for="txt_codigo"></h:outputLabel>
+				<p:inputText id="txt_codigo"
+					value="#{AdministracionProducto.producto.codigo}" />
+				
+					
+				<h:outputLabel value="Nombre : " for="txt_nombre"></h:outputLabel>
+				<p:inputText id="txt_nombre"
+					value="#{AdministracionProducto.producto.nombre}" />
+					
+					<p:outputLabel for="fechaFabricacion" value="fechaFabricacion:" />
+					<p:calendar id="fechaFabricacion" value="#{AdministracionProducto.producto.fechaFabricacion}" showOn="button" />
+							
+									
+      					
+				<h:outputLabel value="Precio : $" for="txt_precio"></h:outputLabel>
+				<p:inputText id="txt_precio"
+					value="#{AdministracionProducto.producto.precio}" />
+	  			
+					
+				<h:outputLabel value="Cantidad : " for="txt_cantidad"></h:outputLabel>
+				<p:inputText id="txt_cantidad"
+					value="#{AdministracionProducto.producto.cantidad}" />
+	</h:panelGrid>
+		</p:panel>
+		
+			<p:commandButton value="Guardar" id="btn_guardar_1"
+			action="#{AdministracionProducto.crearProductoSinRetorno()}"
+			styleClass="ui-priority-primary" />
+			
+			
+			
+	
+	</h:form>
+
+	<p:spacer width="100" height="20" />
+
+	<h:form id="form2">
+		<p:panel id="tallerparadigmas" header="Crear Productos">
+			<p:dataTable id="Producto" var="prod"
+				value="#{AdministracionProducto.productos}">
+				<f:facet name="header">
+        			Lista de Productos
+   				 </f:facet>
+				<p:column headerText="Codigo">
+					<h:outputText value="#{prod.codigo}" />
+				</p:column>
+
+				<p:column headerText="Nombre">
+					<h:outputText value="#{prod.nombre}" />
+				</p:column>
+				
+				<p:column headerText="Cantidad">
+					<h:outputText value="#{prod.cantidad}" />
+				</p:column>
+				<p:column headerText="Precio">
+					<h:outputText value="#{prod.precio}" />
+				</p:column>
+				
+
+			</p:dataTable>
+		</p:panel>
+
+	</h:form>
+	
+</h:body>
+</html>

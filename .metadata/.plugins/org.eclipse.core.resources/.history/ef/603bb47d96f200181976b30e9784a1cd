@@ -1,0 +1,10 @@
+package entradadatos;
+import java.io.*;
+
+public class EntradaDatos {
+public static void main(String[] args) {
+	String captura;
+	InputStreamReader bInput = new InputStreamReader(System.in);
+	
+}
+}

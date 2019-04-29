@@ -1,0 +1,61 @@
+package principal;
+
+import java.util.Iterator;
+import java.util.Scanner;
+
+public class Metodos {
+	Scanner sc = new Scanner(System.in);
+
+	public void Imprimir(Byte[] imprimir) {
+		for (Byte byte1 : imprimir) {
+			System.out.print(byte1);
+		}
+	}
+
+	public Byte[] CrearPolinomio() {
+
+		// System.out.println("Mayor grado");
+		// Byte[] polinomio = new Byte[(sc.nextInt()+1)];
+		// for (int s = 0; s < polinomio.length; s++) {
+		// System.out.println("Ingrese :");
+		// polinomio[s] = sc.nextByte();
+		// }
+		Byte[] polinomio = { 1, 1, 0 };
+
+		return polinomio;
+	}
+
+	public Byte[] AgregarCeros(Byte[] data, Byte[] polinomio) {
+		Byte[] data0 = new Byte[data.length + (polinomio.length - 1)];
+		for (int i = 0; i < data.length; i++) {
+			data0[i] = data[i];
+		}
+		for (int i = data.length; i < data0.length; i++) {
+			data0[i] = 0;
+		}
+		return data0;
+
+	}
+
+	public void Xor(Byte[] data, Byte[] polinomio) {
+		Byte[] residuo = new Byte[polinomio.length - 1];
+		int bandera = 0;
+		do {
+			for (int i = bandera; i < bandera + polinomio.length; i++) {
+				if (data[i] == polinomio[i]) {
+					residuo[i] = 0;
+				} else {
+					residuo[i] = 1;
+				}
+			}
+
+		} while (residuo.length < bandera);
+
+	}
+
+	public void ContarCeros(Byte[] data) {
+		int contador=0;
+		
+	}
+
+}

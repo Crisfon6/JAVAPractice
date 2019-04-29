@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf15247485560960" configfile="/TallerJPA/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="index.xhtml" id="pf15254841296950" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf15254841296951" inlinks="pf15254841296952" path="/index.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="paginas/mantenimientoProductos.xhtml" id="pf15254841296953" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf15254841296952" inlinks="pf15254841296951" path="/paginas/mantenimientoProductos.xhtml"/>
+  <links id="pf15254841296951" target="pf15254841296953" source="pf15254841296950" outcome="nueva-pagina"/>
+  <links id="pf15254841296952" target="pf15254841296950" source="pf15254841296953" outcome="Inicio"/>
+</pageflow:Pageflow>

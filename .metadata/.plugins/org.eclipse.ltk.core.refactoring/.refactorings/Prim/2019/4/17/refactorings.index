@@ -1,0 +1,10 @@
+1556468727392	Rename field 'connec'
+1556468824528	Rename field 'values'
+1556469892118	Rename field 'name'
+1556469912230	Rename field 'nodesConnected'
+1556470521872	Rename type 'Graph'
+1556482292184	Convert local variable 'sc' to field
+1556482435340	Convert local variable 'net' to field
+1556485344561	Rename type 'Prim'
+1556487619296	Extract local variable 'arc'
+1556487696922	Rename method 'Algorithm'

@@ -1,0 +1,25 @@
+package main;
+
+public class Prim {
+	static int SUMAPESOS;
+	public  Node[] net;
+	public int MayorActual;
+	public String[] NodosRecorridos;
+	
+	public Prim(Node[] net) {
+		super();
+		this.net = net;
+	}
+
+
+	public void Algorithm() {
+		for (int i = 0; i < net.length; i++) {
+			for (int j = 0; j < NodosRecorridos.length; j++) {
+				if (net[i].getArc()) {
+					
+				}
+			}
+			
+		}
+	}
+}

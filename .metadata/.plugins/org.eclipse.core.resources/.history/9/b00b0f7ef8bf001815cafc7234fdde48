@@ -1,0 +1,10 @@
+package principal;
+
+public class Metodos {
+	public double ErrorEsperado(double cifra) {
+		return (0.5* Math.pow(10, -cifra));
+	}
+	public doble ErrorAproximado(double valorAnterior, double valorActual) {
+		
+	}
+}

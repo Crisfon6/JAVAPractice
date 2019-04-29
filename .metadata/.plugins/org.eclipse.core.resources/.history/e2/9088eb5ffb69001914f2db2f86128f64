@@ -1,0 +1,56 @@
+package main;
+
+import java.util.Scanner;
+
+public class Graph {
+	 Node[] nodes;
+	Scanner sc = new Scanner(System.in);
+	int nNodes;
+	Node NodeAux;
+	
+
+	public Graph(int nNodes) {
+		super();
+		this.nNodes = nNodes;
+		this.nodes = new Node[nNodes];
+		addNodes();
+	}
+	
+	
+
+	public Node[] getNodes() {
+		return nodes;
+	}
+
+
+
+	public void setNodes(Node[] nodes) {
+		this.nodes = nodes;
+	}
+
+
+
+	public Node[] addNodes() {
+
+		for (int i = 0; i < nNodes; i++) {
+			System.out.println("Enter the name node");
+
+			String name = sc.next();
+			System.out.println("How many nodes are connected to this");
+			int nConnections = sc.nextInt();
+			String[] connections = {"o","p"};
+			for (int j = 0; j < nConnections; j++) {
+				System.out.println("Enter the node connected to this");
+				String aux = sc.next(); 
+				connections[j] = aux;
+				
+			}
+			NodeAux = new Node(name, connections);
+			NodeAux.addArc();
+			nodes[i] = NodeAux; // Create the node
+			}
+		
+
+	}
+}
+	

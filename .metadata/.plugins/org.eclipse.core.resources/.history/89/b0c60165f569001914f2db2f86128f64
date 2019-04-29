@@ -1,0 +1,9 @@
+package main;
+
+public class Arc {
+	int nArc;
+	String[] value;//First position name node direction and second position cost separate for a ","
+
+	
+
+}

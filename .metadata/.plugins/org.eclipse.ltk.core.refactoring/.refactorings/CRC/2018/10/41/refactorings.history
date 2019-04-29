@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;data&apos; in &apos;principal.Metodos.Xor(...)&apos; to &apos;dataModificada&apos;&#x0D;&#x0A;- Original project: &apos;CRC&apos;&#x0D;&#x0A;- Original element: &apos;principal.Metodos.Xor(Byte[], Byte[]).data&apos;&#x0D;&#x0A;- Renamed element: &apos;data&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;data&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;principal{Metodos.java[Metodos~Xor~\[QByte;~\[QByte;@data!1103!1113!1110!1113!\[QByte;!0!true" name="dataModificada" references="true" stamp="1539022758983" version="1.0"/>
+</session>

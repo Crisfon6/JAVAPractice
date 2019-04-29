@@ -1,0 +1,38 @@
+package main;
+
+public class Arc {
+	
+	String inicio;
+	String fin;
+	float cost;
+	public Arc(String inicio, String fin, int cost) {
+		super();
+		this.inicio = inicio;
+		this.fin = fin;
+		this.cost = cost;
+		System.out.println("constructor");
+	}
+	public String getInicio() {
+		return inicio;
+	}
+	public void setInicio(String inicio) {
+		this.inicio = inicio;
+	}
+	public String getFin() {
+		return fin;
+	}
+	public void setFin(String fin) {
+		this.fin = fin;
+	}
+	public float getCost() {
+		return cost;
+	}
+	public void setCost(float cost) {
+		this.cost = cost;
+	}
+	
+	
+
+	
+
+}

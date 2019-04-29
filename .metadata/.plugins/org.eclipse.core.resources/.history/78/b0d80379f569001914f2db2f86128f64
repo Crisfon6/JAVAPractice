@@ -1,0 +1,10 @@
+package main;
+
+public class Arc {
+	int nArc;
+	String inicio;
+	String fin;
+
+	
+
+}

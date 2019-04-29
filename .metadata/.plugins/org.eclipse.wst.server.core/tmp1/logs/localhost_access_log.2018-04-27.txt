@@ -1,0 +1,9 @@
+127.0.0.1 - - [27/Apr/2018:21:12:16 -0500] "GET / HTTP/1.1" 404 993
+127.0.0.1 - - [27/Apr/2018:21:13:27 -0500] "GET / HTTP/1.1" 404 993
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:13:29 -0500] "GET /TallerParadigmas/faces/index.xhtml HTTP/1.1" 200 344
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:13:29 -0500] "GET /TallerParadigmas/faces/javax.faces.resource/theme.css?ln=primefaces-aristo HTTP/1.1" 200 24520
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:13:42 -0500] "GET /TallerParadigmas/faces/index.xhtml HTTP/1.1" 200 344
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:13:42 -0500] "GET /TallerParadigmas/faces/javax.faces.resource/theme.css?ln=primefaces-aristo HTTP/1.1" 200 24520
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:13:43 -0500] "GET /favicon.ico HTTP/1.1" 404 1004
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:14:15 -0500] "GET /TallerParadigmas/faces/index.xhtml HTTP/1.1" 200 347
+0:0:0:0:0:0:0:1 - - [27/Apr/2018:21:14:15 -0500] "GET /TallerParadigmas/faces/javax.faces.resource/theme.css?ln=primefaces-aristo HTTP/1.1" 304 -

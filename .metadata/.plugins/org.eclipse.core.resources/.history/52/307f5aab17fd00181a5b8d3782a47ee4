@@ -1,0 +1,39 @@
+package personas.jdbc;
+
+import java.sql.*;
+
+public class Conexion {
+	private final String JDBC_DRIVER ="com.mysql.cj.jdbc.Driver";
+	private final String JDBC_URL = "";
+	private final String JDBC_USER = "root";
+	private final String JDBC_PASS = "root";
+	
+	public Connection getConnection() {
+	return null;	
+	}
+	public void close(ResultSet rs) {
+	try {
+		rs.close();
+	} catch (SQLException e) {
+		// TODO: handle exception
+		e.printStackTrace();
+	}
+	}
+	public void close(PreparedStatement ps) {
+		try {
+			ps.close();
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	public void close(Connection c) {
+		try {
+			c.close();
+		} catch (SQLException e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}
+	}
+	
+}

@@ -1,0 +1,19 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	private static Scanner sc;
+	
+	
+	public static void main(String Args[]) {
+		sc = new Scanner(System.in);
+		System.out.println("Enter the number of nodes for you graph");
+		
+		int nNodes = sc.nextInt();
+		Graph net = new Graph(nNodes);
+		Node[] grafo = net.addNodes();
+		Prim algorithm = new Prim();
+	}
+	
+}

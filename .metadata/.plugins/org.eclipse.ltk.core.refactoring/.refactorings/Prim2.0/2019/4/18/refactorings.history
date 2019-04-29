@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename field &apos;nodeRecorrido&apos; in &apos;main.Prim&apos; to &apos;nodesRecorrido&apos;&#x0D;&#x0A;- Original project: &apos;Prim2.0&apos;&#x0D;&#x0A;- Original element: &apos;main.Prim.nodeRecorrido&apos;&#x0D;&#x0A;- Renamed element: &apos;main.Prim.nodesRecorrido&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" delegate="false" deprecate="false" description="Rename field &apos;nodeRecorrido&apos;" flags="589830" getter="false" id="org.eclipse.jdt.ui.rename.field" input="/src&lt;main{Prim.java[Prim^nodeRecorrido" name="nodesRecorrido" references="true" setter="false" stamp="1556499528650" textual="false" version="1.0"/>
+</session>

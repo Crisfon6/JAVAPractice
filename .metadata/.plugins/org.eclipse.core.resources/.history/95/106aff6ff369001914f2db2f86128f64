@@ -1,0 +1,61 @@
+package main;
+
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Node {
+	
+	 String NAME;
+	 String[] NODESCONNECTED;
+	 Arc[] arc=null;
+	Scanner sc = new Scanner(System.in);
+	
+	
+	public Node() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+	public Node(String name, String[] connection) {
+		super();
+		this.NAME = name;
+		System.out.println("Creo objeto Node "+this.getNAME());
+		this.NODESCONNECTED = connection;
+		System.out.println("ok");
+	}
+	public void addArc() {
+		for (int i = 0; i < NODESCONNECTED.length; i++) {
+			System.out.println("How much is the value going from node"+ this.getNAME()+" to  " +this.getNODESCONNECTED()[i]);
+			String costTravel = sc.next();
+			String[] value = {this.getNODESCONNECTED()[i],costTravel};
+			arc[i] = new Arc(value);
+					
+		}
+		
+	}
+	public String getNAME() {
+		return NAME;
+	}
+	public void setNAME(String nAME) {
+		NAME = nAME;
+	}
+	public String[] getNODESCONNECTED() {
+		return NODESCONNECTED;
+	}
+	public void setNODESCONNECTED(String[] nODESCONNECTED) {
+		NODESCONNECTED = nODESCONNECTED;
+	}
+	public Arc[] getArc() {
+		return arc;
+	}
+	public void setArc(Arc[] arc) {
+		this.arc = arc;
+	}
+	@Override
+	public String toString() {
+		return "Node [NAME=" + NAME + ", NODESCONNECTED=" + Arrays.toString(NODESCONNECTED) + ", arc="
+				+ Arrays.toString(arc) + ", sc=" + sc + "]";
+	}
+	
+	
+}

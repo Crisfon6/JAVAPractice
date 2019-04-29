@@ -1,0 +1,22 @@
+package main;
+
+public class Arc {
+	int nArc;
+	String[] value;//First position name node direction and second position cost
+
+	
+	public Arc(String[] values, int nArc) {
+		super();
+		this.value = values;
+		this.nArc = nArc;
+	}
+
+	public String[] getValues() {
+		return value;
+	}
+
+	public void setValues(String[] values) {
+		this.value = values;
+	}
+	
+}

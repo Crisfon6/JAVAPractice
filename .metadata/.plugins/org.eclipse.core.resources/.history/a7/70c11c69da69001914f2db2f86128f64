@@ -1,0 +1,20 @@
+package main;
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String Args[]) {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Enter the number of nodes for you graph");
+		int nNodes = sc.nextInt();
+		
+		int[] test = new int[3];
+		int[] prueba = {0,12,2};
+		System.out.println(prueba.length );
+		System.out.println(prueba[2]);
+		
+//		Prim net = new Prim(nNodes);
+//		net.addNodes();
+	}
+	
+}

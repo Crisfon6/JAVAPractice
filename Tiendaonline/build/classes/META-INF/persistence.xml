@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1"
+ xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+	<persistence-unit name="Tiendaonline" transaction-type="RESOURCE_LOCAL">
+		<provider>org.eclipse.persistence.jpa.PersistenceProvider</provider>
+		<class>model.Categoria</class>
+		<class>model.Empresa</class>
+		<class>model.Factura</class>
+		<class>model.Producto</class>
+		<class>model.Subcategoria</class>
+		<class>model.Usuario</class>
+		<class>model.DetalleFactura</class>
+		<class>model.ListaDeseo</class>
+	
+		<properties>
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/tiendaonline"/>
+			<property name="javax.persistence.jdbc.user" value="root"/>
+			<property name="javax.persistence.jdbc.driver" value="com.mysql.jdbc.Driver"/>
+			<property name="eclipselink.jdbc.exclusive-connection.mode" value="Transactional"/>
+						
+		</properties>
+	</persistence-unit>
+</persistence>

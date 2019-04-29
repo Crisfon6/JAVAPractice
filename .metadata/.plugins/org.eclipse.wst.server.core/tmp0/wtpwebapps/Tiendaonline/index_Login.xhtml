@@ -1,0 +1,40 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+    "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"
+	xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
+	xmlns:h="http://xmlns.jcp.org/jsf/html"
+	xmlns:f="http://xmlns.jcp.org/jsf/core"
+	xmlns:p="http://primefaces.org/ui">
+	
+	
+<h:head>
+	<center><h1>Login</h1></center>
+</h:head>
+
+<h:body>
+	<center>
+	<h:form value="value">
+	<h:outputLabel value="Usuario : " for="txt_usuario"></h:outputLabel>
+	<p:inputText value="#{Login.usuario.nombreusuario}"></p:inputText>
+	<br></br>
+	
+	
+	
+	
+	<br></br>
+	<br></br>
+	<h:outputLabel value="Constraseña : " for="txt_contrasena"></h:outputLabel>
+	<p:inputText value="#{Login.usuario.contrasena}"></p:inputText>
+	<br></br>
+
+	
+	
+	<br></br>
+	<br></br>
+	
+	<p:commandButton value="Entrar" action="#{Login.crearUsuario()}"></p:commandButton>		
+		
+	</h:form>
+		</center>
+</h:body>
+</html>

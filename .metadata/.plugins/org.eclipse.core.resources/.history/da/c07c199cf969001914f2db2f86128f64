@@ -1,0 +1,6 @@
+package main;
+
+public class Prim {
+	static int SUMAPESOS;
+	
+}

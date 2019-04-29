@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename local variable &apos;band&apos; in &apos;punto1.Punto1.DefinirRecorrido(...)&apos; to &apos;banderaSimple&apos;&#x0D;&#x0A;- Original project: &apos;Taller8-9&apos;&#x0D;&#x0A;- Original element: &apos;punto1.Punto1.DefinirRecorrido(char[]).band&apos;&#x0D;&#x0A;- Renamed element: &apos;band&apos;&#x0D;&#x0A;- Update references to refactored element" description="Rename local variable &apos;band&apos;" id="org.eclipse.jdt.ui.rename.local.variable" input="/src&lt;punto1{Punto1.java[Punto1~DefinirRecorrido~\[C@band!573!584!577!580!I!0!false" name="banderaSimple" references="true" stamp="1525321608006" version="1.0"/>
+</session>
